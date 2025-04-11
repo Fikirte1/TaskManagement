@@ -1,0 +1,103 @@
+/* Navbar.css */
+
+.navbar {
+  background-color: #f0f0f0;
+  padding: 10px 15px; /* Reduce vertical padding, horizontal slightly */
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05); /* More subtle shadow */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px; /* Reduce height */
+  z-index: 99;
+  transition: padding-left 0.3s ease-in-out;
+  font-size: 0.95em; /* Slightly smaller overall font size */
+}
+
+.navbar.sidebar-expanded {
+  padding-left: 250px;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.toggle-menu-btn-mobile {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.3em; /* Slightly smaller mobile toggle */
+  margin-right: 10px; /* Reduce margin */
+}
+
+.navbar-left span.page-title {
+  font-weight: bold;
+  font-size: 1.1em; /* Smaller page title */
+  margin-left: 15px; /* Reduce margin */
+}
+
+.navbar-left .expanded-nav-items {
+  display: flex;
+  margin-left: 15px; /* Reduce margin */
+}
+
+.navbar-left .expanded-nav-items a {
+  margin-left: 10px; /* Reduce margin */
+  text-decoration: none;
+  color: #333;
+  font-size: 0.9em; /* Smaller expanded nav items */
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar-right {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-right li {
+  margin-left: 15px; /* Reduce margin */
+  position: relative;
+}
+
+.notification-icon {
+  cursor: pointer;
+  font-size: 1.2em; /* Smaller icon */
+  background-color: whitesmoke;
+  color:black
+
+}
+
+.notification-badge {
+  position: absolute;
+  top: -11px; /* Adjust position */
+  right: -11px; /* Adjust position */
+  background-color: rgb(243, 28, 28);
+  color: #f6eded;
+  border-radius: 50%;
+  padding: 4px 6px; /* Smaller badge */
+  font-size: 0.7em;
+}
+
+.user-icon {
+  display: flex;
+  align-items: center;
+  font-size: 1em; /* Smaller icon */
+  background-color: rgb(249, 244, 244);
+
+}
+
+.user-icon svg {
+  font-size: 1.9em; /* Adjust user icon size if needed */
+  background-color: rgb(9, 1, 1);
+  border-radius: 50%;
+
+}
+
+.user-icon span {
+  margin-left: 3px; /* Reduce margin */
+  color: #333; /* Darker color for better contrast */
+  font-size: 0.9em; /* Smaller user name */
+}

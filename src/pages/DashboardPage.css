@@ -1,0 +1,122 @@
+/* DashboardPage.css */
+.dashboard-container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background-color: #f8f9fa;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+.main-content {
+  flex-grow: 1;
+  transition: margin-left 0.3s ease-in-out;
+  margin-left: 250px; /* Match sidebar width */
+}
+
+.main-content.sidebar-closed {
+  margin-left: 0;
+  width: 100%; /* Ensure the main content takes the full width when the sidebar is closed */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  height: 70px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.sidebar-toggle {
+  cursor: pointer;
+  font-size: 1.3rem;
+  color: #2c3e50;
+  padding: 0.8rem;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+}
+
+.sidebar-toggle:hover {
+  background-color: #f1f3f5;
+}
+
+.nav-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 0;
+}
+
+.navbar-icons {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav-icon {
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #64748b;
+  padding: 0.8rem;
+  border-radius: 50%;
+  transition: all 0.2s;
+}
+
+.nav-icon:hover {
+  background-color: #f1f3f5;
+  color: #2c3e50;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+  cursor: pointer;
+}
+
+.user-profile:hover {
+  background-color: #f1f3f5;
+}
+
+.profile-icon {
+  font-size: 1.1rem;
+  padding: 0.8rem;
+  background-color: #e9ecef;
+  border-radius: 50%;
+}
+
+.profile-name {
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.dashboard-content {
+  padding: 2rem 3rem;
+  min-height: calc(100vh - 70px);
+  background-color: #f8f9fa;
+}
+
+.dashboard-content h2 {
+  color: #1a2332;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.dashboard-content p {
+  color: #64748b;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}

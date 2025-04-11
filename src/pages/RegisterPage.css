@@ -1,0 +1,26 @@
+/* Full-page container */
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;  /* Full screen height */
+    width: 100vw;   /* Full screen width */
+    background-color: #f0f2f5; /* Light background */
+  }
+  
+  /* Form box styling */
+  .register-form {
+    width: 100%;
+    max-width: 450px;
+    padding: 30px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  /* Ensure the button takes full width */
+  button {
+    width: 100%;
+  }
+  

@@ -1,0 +1,34 @@
+/* Ensure the page takes the full width and height */
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Ensure container fills the entire screen */
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;  /* Full viewport height */
+    width: 100vw;   /* Full viewport width */
+    background-color: #f7f7f7; /* Optional: Background color */
+  }
+  
+  /* Centered login form */
+  .login-form {
+    width: 100%;
+    max-width: 500px;  /* Adjust as needed */
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  /* Ensure button takes full width */
+  button {
+    width: 100%;
+  }
+  

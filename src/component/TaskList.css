@@ -1,0 +1,149 @@
+.taskListContainer {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.heading {
+    text-align: center;
+    color: #333;
+    margin-bottom: 35px;
+    font-size: 2.5em;
+    font-weight: 600;
+}
+
+.noTasks {
+    text-align: center;
+    color: #777;
+    margin-top: 30px;
+    font-size: 1.2em;
+}
+
+.taskList {
+    list-style: none;
+    padding: 0;
+}
+
+.taskItem {
+    background-color: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.taskItem:hover {
+    transform: scale(1.02);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.taskInfo {
+    flex-grow: 1;
+}
+
+.taskInfo h3 {
+    margin-bottom: 8px;
+    font-size: 1.4em;
+    color: #333;
+}
+
+.taskInfo p {
+    color: #666;
+    margin-bottom: 10px;
+    font-size: 1em;
+}
+
+.headerInfo {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.taskActions {
+    margin-left: 30px;
+    display: flex;
+    gap: 10px;
+}
+
+.actionButton {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.actionButton:hover {
+    background-color: #1e7e34;
+}
+
+.deleteButton {
+    background-color: #dc3545;
+}
+
+.deleteButton:hover {
+    background-color: #c82333;
+}
+
+.link {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.link:hover {
+    color: #0056b3;
+}
+
+.loading {
+    text-align: center;
+    margin-top: 40px;
+    color: #555;
+    font-size: 1.2em;
+}
+
+.error {
+    text-align: center;
+    margin-top: 40px;
+    color: #dc3545;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.priorityLow {
+    font-weight: bold;
+    color: #52c41a;
+}
+
+.priorityMedium {
+    font-weight: bold;
+    color: #faad14;
+}
+
+.priorityHign {
+    font-weight: bold;
+    color: #ff4d4f;
+}
+
+.statusActive {
+    font-style: italic;
+    color: #1890ff;
+}
+
+.statusInactive {
+    font-style: italic;
+    color: #777;
+}

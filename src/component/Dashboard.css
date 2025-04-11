@@ -1,0 +1,166 @@
+.dashboard-container {
+    flex-grow: 1;
+    flex-shrink: 1; /* Ensure it can shrink */
+    display: flex;
+    flex-direction: column;
+    background-color: #f9f9f9;
+    overflow-x: auto;
+}
+
+.dashboard-container.sidebar-expanded {
+    padding-left: 250px; /* Padding when sidebar is expanded */
+}
+.sidebar-header{
+color:black
+}
+.toggle-menu-btn{
+    color:black;
+    background: #000;
+    
+}
+.content-area{
+    background: white;
+}
+.sidebar {
+    background-color: #f0f0f0;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: width 0.3s ease-in-out;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+    width: 60px; /* Initial width (collapsed) */
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+}
+
+.sidebar.expanded {
+    width: 250px; /* Width when expanded */
+}
+
+.main-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #f9f9f9;
+    overflow-x: auto;
+}
+
+.navbar {
+    background-color: #fff;
+    padding: 15px 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    z-index: 99;
+    transition: padding-left 0.3s ease-in-out;
+}
+
+.navbar.sidebar-expanded {
+    padding-left: 250px; /* Adjust for expanded sidebar */
+}
+
+.content-area {
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.dashboard-widgets {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.dashboard-widgets.sidebar-expanded .task-summary-card:last-child {
+    display: none; /* Hide the last card when sidebar is expanded */
+}
+
+.dashboard-main-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.create-task-section {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.task-list-section {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.page-title {
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-left: 20px;
+}
+
+.navbar-right.sidebar-expanded .notification-icon {
+    display: none; /* Hide notification icon when sidebar is expanded */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .dashboard-container {
+        flex-direction: column;
+        padding-left: 0;
+    }
+
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: -250px;
+        height: 100vh;
+        width: 250px;
+        transition: left 0.3s ease-in-out;
+        z-index: 1000;
+    }
+
+    .sidebar.expanded {
+        left: 0;
+    }
+
+    .main-content {
+        padding-top: 60px;
+        overflow-x: auto;
+    }
+
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 999;
+    }
+
+    .navbar.sidebar-expanded {
+        padding-left: 0; /* Reset padding on mobile */
+    }
+
+    .toggle-menu-btn-mobile {
+        display: block;
+    }
+
+    .dashboard-widgets {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-widgets.sidebar-expanded .task-summary-card:last-child {
+        display: block; /* Show on mobile when expanded */
+    }
+
+    .navbar-right.sidebar-expanded .notification-icon {
+        display: block; /* Show on mobile when expanded */
+    }
+}

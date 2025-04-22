@@ -2,7 +2,10 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faHome, faUser, faCheckSquare, faCog, faSignOutAlt, faPlusCircle, faListAlt, faCalendarCheck, faChartBar, faClock, faExclamationTriangle } from '@fortawesome/free-solid-svg-icons'; // Import necessary icons
+import {
+    faBars, faHome, faUser, faCog, faSignOutAlt, faPlusCircle, faListAlt,
+    faCalendarCheck, faChartBar, faCheckCircle, faTimesCircle, faTrash
+} from '@fortawesome/free-solid-svg-icons'; // Import new icons
 import './Sidebar.css';
 
 const Sidebar = ({ isCollapsed, toggleMenu }) => {
@@ -12,8 +15,10 @@ const Sidebar = ({ isCollapsed, toggleMenu }) => {
         { path: "/", label: "Dashboard", icon: faHome },
         { path: "/tasks/create", label: "Create Task", icon: faPlusCircle },
         { path: "/tasks/list", label: "List Tasks", icon: faListAlt },
-        { path: "/tasks/calendar", label: "Calendar", icon: faCalendarCheck },
+        { path: "/tasks/completed", label: "Completed Tasks", icon: faCheckCircle },
+        { path: "/tasks/inactive", label: "Incomplete Tasks", icon: faTimesCircle },
         { path: "/tasks/reports", label: "Reports", icon: faChartBar },
+        { path: "/trash", label: "Trash", icon: faTrash },
         { path: "/profile", label: "Profile", icon: faUser },
         { path: "/settings", label: "Settings", icon: faCog },
         { path: "/logout", label: "Logout", icon: faSignOutAlt },

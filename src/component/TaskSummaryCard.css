@@ -1,61 +1,63 @@
 .task-summary-card {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 20px;
     display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 20px;
-    transition: transform 0.2s ease-in-out;
-    border-left: 5px solid #007bff; /* Default accent color */
-}
-
-.task-summary-card:hover {
-    transform: translateY(-3px);
-}
-
-.task-summary-card.active {
-    border-left-color: #ffc107; /* Yellow/Amber for active */
-}
-
-.task-summary-card.completed {
-    border-left-color: #28a745; /* Green for completed */
-}
-
-.task-summary-card.overdue {
-    border-left-color: #dc3545; /* Red for overdue */
-}
-
-.card-icon {
-    font-size: 2.5em;
-    color: #6c757d; /* Gray icon color */
-}
-
-.task-summary-card.active .card-icon {
-    color: #ffc107;
-}
-
-.task-summary-card.completed .card-icon {
-    color: #28a745;
-}
-
-.task-summary-card.overdue .card-icon {
-    color: #dc3545;
-}
-
-.card-info {
-    flex-grow: 1;
-}
-
-.card-title {
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    height: 100%;
+  }
+  
+  .task-summary-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .task-summary-card .card-icon {
+    margin-bottom: 15px;
+    color: #555;
+  }
+  
+  .task-summary-card .card-info {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .task-summary-card .card-title {
     font-size: 1.1em;
+    font-weight: 500;
     color: #333;
     margin-bottom: 5px;
-}
-
-.card-value {
+  }
+  
+  .task-summary-card .card-value {
     font-size: 1.5em;
-    font-weight: bold;
-    color: #333;
-}
+    font-weight: 700;
+    color: #222;
+  }
+  
+  .task-summary-card.completed {
+    background-color: #f0fdf4;
+  }
+  
+  .task-summary-card.completed .card-icon {
+    color: #16a34a;
+  }
+  
+  .task-summary-card.completed .card-value {
+    color: #15803d;
+  }
+  
+  .task-summary-card.incomplete {
+    background-color: #fef2f2;
+  }
+  
+  .task-summary-card.incomplete .card-icon {
+    color: #ef4444;
+  }
+  
+  .task-summary-card.incomplete .card-value {
+    color: #b91c1c;
+  }
+  

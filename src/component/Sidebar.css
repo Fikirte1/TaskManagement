@@ -12,6 +12,24 @@
   flex-direction: column;
   z-index: 100; /* Ensure it's above main content */
 }
+/* Sidebar.css */
+.sidebar-menu li a {
+  /* ... existing styles ... */
+  transition: background-color 0.2s ease;
+}
+
+.sidebar-menu li a:hover {
+  background-color: rgba(0, 0, 0, 0.05); /* Light background on hover */
+}
+
+.sidebar-menu li.active a {
+  background-color: #36A2EB; /* Example active color */
+  color: white;
+}
+
+.sidebar-menu li.active a:hover {
+  background-color: #36A2EB; /* Maintain active color on hover */
+}
 
 
 
